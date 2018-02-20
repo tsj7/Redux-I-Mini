@@ -35,6 +35,10 @@ console.log(newPerson);
   Concatenate the two of them together using `.concat()`
 */
 
+const superHeroes = ['bat', 'super', 'spider'];
+const superVillains = ['joker', 'lex', 'doc oc'];
+const combinedSupers = superHeroes.concat(superVillains);
+
 console.log(superHeroes);
 console.log(superVillains);
 console.log(combinedSupers);
@@ -46,6 +50,16 @@ console.log(combinedSupers);
   Create a new object `studentAverage` using Object.assign() from the given original object.
   The new object should filter out any scores that are < 34 Array.filter should be used here.
 */
+
+const studentScores = {
+  name: 'Tyge',
+  age: 99,
+  scores: [26,14,25,35,45]
+};
+
+let studentAverage = Object.assign({}, studentScores);
+
+studentAverage.scores = studentAverage.scores.filter(scores => scores < 34);
 
 console.log(studentScores);
 console.log(studentAverage);
